@@ -1,0 +1,20 @@
+{
+  "name": "screen-aware",
+  "version": "1.0.0",
+  "description": "Screen Time Tracker Chrome Extension",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "dev": "tsc --watch"
+  },
+  "author": "havishshetty",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.9.37",
+    "@types/chrome": "^0.0.254",
+    "typescript": "^5.0.0"
+  }
+}

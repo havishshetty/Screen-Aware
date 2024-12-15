@@ -1,19 +1,25 @@
 {
-    "manifest_version": 3,
-    "name": "Screen Time Tracker",
-    "version": "1.0",
-    "description": "Tracks time spent on different websites",
-    "permissions": [
-      "storage",
-      "tabs",
-      "activeTab",
-      "notifications",
-      "alarms"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html"
-    }
+  "manifest_version": 3,
+  "name": "Screen Time Tracker",
+  "version": "1.0",
+  "description": "Tracks time spent on different websites",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
   }
+}

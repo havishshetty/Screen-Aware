@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            width: 450px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 10px;
+            height: 350px;
+        }
+        .controls {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .limits-section {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        .limit-input {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .remove-limit-btn:hover {
+            background-color: #ff6666 !important;
+        }
+        .chart-title {
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+        canvas#timeChart {
+        margin-top: 10px;
+    }
+    .header-info {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .time-display {
+            font-family: monospace;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .user-info {
+            color: #666;
+            margin-top: 5px;
+        }
+
+    </style>
+    <script src="chart.js"></script>
+</head>
+<body>
+    <div class="header-info">
+        <div class="time-display" id="timeDisplay"></div>
+        <div class="user-info" id="userInfo"></div>
+    </div>
+    <h2>Screen Time Stats</h2>
+    <div class="controls">
+        <select id="chartType">
+            <option value="bar">Bar Chart</option>
+            <option value="pie">Pie Chart</option>
+            <option value="doughnut">Doughnut Chart</option>
+        </select>
+        <select id="timeRange">
+            <option value="minutes">Minutes</option>
+            <option value="hours">Hours</option>
+        </select>
+    </div>
+    <div class="container">
+        <canvas id="timeChart"></canvas>
+    </div>
+    
+    <div class="limits-section">
+        <h3>Set Time Limits</h3>
+        <div class="limit-input">
+            <input type="text" id="domainInput" placeholder="Enter domain (e.g., facebook.com)">
+            <input type="number" id="limitInput" placeholder="Minutes">
+            <button id="setLimit">Set Limit</button>
+        </div>
+        <div id="currentLimits"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
